@@ -29,7 +29,7 @@
             <!-- Add icons to the links using the .nav-icon class
    with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="{{url("/list")}}" class="nav-link">
+                <a href="{{url("/")}}" class="nav-link">
                     <i class="nav-icon fas fa-solid fa-car-side"></i>
                     <p>
                         List Mobil
@@ -37,7 +37,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/peminjaman')}}" class="nav-link">
                     <i class="nav-icon fas fa-caret-square-right"></i>
                     <p>
                         Peminjaman
@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/pengembalian')}}" class="nav-link">
                     <i class="nav-icon fas fa-caret-square-left"></i>
                     <p>
                         Pengembalian

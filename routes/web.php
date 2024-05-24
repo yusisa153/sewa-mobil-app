@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+
+Route::post('/tambahData', [HomeController::class, 'tambahData']);
+
+Route::get('/hapusData/{id}', [HomeController::class, 'hapusData']);
 
 Route::get('/master', function () {
     return view('layout.master');
 });
 
-Route::get('/list', function () {
-    return view('data-mobil.index');
-});
+Route::get('/peminjaman', [HomeController::class, 'peminjaman']);
+Route::get('/ambilDataPeminjaman', [HomeController::class, 'ambilDataPeminjaman']);
+
+Route::post('/storePeminjaman', [HomeController::class, 'storePeminjaman']);
+
+Route::get('/pengembalian', [HomeController::class, 'pengembalian']);
+
+Route::post('/storePengembalian', [HomeController::class, 'storePengembalian']);
